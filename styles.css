@@ -27,6 +27,7 @@ body {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.98rem;
   line-height: 1.6;
+  overflow-x: clip;
 }
 
 a {
@@ -105,6 +106,7 @@ main {
   margin: 0 0 0.8rem;
   color: var(--dim);
   font-size: 0.86rem;
+  overflow-wrap: anywhere;
 }
 
 h1,
@@ -171,7 +173,7 @@ h2 {
 
 .hero {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 2.2rem;
   align-items: start;
   margin-bottom: 0.85rem;
@@ -179,8 +181,12 @@ h2 {
 
 .editor {
   margin: 0;
+  min-width: 0;
+  max-width: 100%;
   background: var(--panel);
   border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .editor-bar {
@@ -210,6 +216,7 @@ h2 {
   overflow-x: auto;
   font-size: 0.74rem;
   line-height: 1.65;
+  tab-size: 4;
 }
 
 .caret {
@@ -279,6 +286,7 @@ h2 {
 
 .card p {
   margin: 0;
+  padding-left: 1.15rem;
   color: var(--ink);
 }
 
@@ -288,30 +296,20 @@ h2 {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
 }
 
 .stack li {
   display: grid;
-  grid-template-columns: 9rem 1fr;
-  gap: 0.6rem;
-  padding: 0.45rem 0;
+  grid-template-columns: 15ch minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
   border-top: 1px solid var(--line);
-}
-
-.stack li:nth-child(odd) {
-  padding-right: 1rem;
-}
-
-.stack li:nth-child(even) {
-  padding-left: 1rem;
 }
 
 .stack span {
   color: var(--dim);
-}
-
-.stack span::before {
-  content: "export ";
 }
 
 .stack strong {
@@ -330,9 +328,10 @@ h2 {
 }
 
 .certs a {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: start;
   padding: 0.55rem 0;
   color: var(--ink);
   text-decoration: none;
@@ -448,29 +447,65 @@ html.js.booted #contacto {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .hero,
   .cards,
   .stack {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .stack li:nth-child(odd),
-  .stack li:nth-child(even) {
-    padding-left: 0;
-    padding-right: 0;
+  .hero,
+  .section {
+    padding: 1rem 0.95rem 1.05rem;
   }
 
   .top {
     align-items: flex-start;
     flex-direction: column;
+    gap: 0.55rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
+  .nav {
+    gap: 0.7rem 1rem;
+  }
+
   main,
   .status {
-    width: min(980px, calc(100% - 2rem));
+    width: min(980px, calc(100% - 1.5rem));
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 0.92rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .stack li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+
+  .stack strong,
+  .card p {
+    padding-left: 1rem;
+  }
+
+  .certs a {
+    grid-template-columns: 1.4rem minmax(0, 1fr);
+  }
+
+  .certs a::after {
+    grid-column: 2;
+  }
+
+  .code {
+    font-size: 0.68rem;
   }
 }
 
