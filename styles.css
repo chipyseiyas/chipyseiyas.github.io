@@ -163,6 +163,13 @@ h2 {
   line-height: 1.05;
 }
 
+.degree {
+  margin: 0.9rem 0 0;
+  color: var(--blue);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+}
+
 .lead,
 .section-lead {
   color: var(--muted);
