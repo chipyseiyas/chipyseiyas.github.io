@@ -1,10 +1,13 @@
 :root {
-  --bg: #10140f;
-  --ink: #d7e8cf;
-  --dim: #7d9278;
-  --prompt: #8dff73;
-  --line: #2a3828;
-  --panel: #161c15;
+  --bg: #1b1d24;
+  --block: #262833;
+  --ink: #f4f5f8;
+  --dim: #a7adbd;
+  --prompt: #d2f35a;
+  --user: #ff6d9a;
+  --path: #7eb6ff;
+  --line: #3c4050;
+  --panel: #1e2028;
   color-scheme: dark;
 }
 
@@ -35,7 +38,7 @@ a {
   left: 1rem;
   top: -3rem;
   background: var(--prompt);
-  color: #10140f;
+  color: #1b1d24;
   padding: 0.35rem 0.6rem;
   z-index: 5;
 }
@@ -53,7 +56,7 @@ a {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 6vw;
-  background: rgba(16, 20, 15, 0.94);
+  background: rgba(27, 29, 36, 0.94);
   border-bottom: 1px solid var(--line);
 }
 
@@ -90,11 +93,11 @@ main {
 }
 
 .user {
-  color: var(--prompt);
+  color: var(--user);
 }
 
 .path {
-  color: #d7c36a;
+  color: var(--path);
 }
 
 .kicker,
@@ -157,13 +160,21 @@ h2 {
   text-underline-offset: 0.2em;
 }
 
+.hero,
+.section {
+  background: var(--block);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--prompt);
+  border-radius: 12px;
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 2.2rem;
   align-items: start;
-  padding-bottom: 2.2rem;
-  border-bottom: 1px dashed var(--line);
+  margin-bottom: 0.85rem;
 }
 
 .editor {
@@ -213,28 +224,28 @@ h2 {
 
 .tok-punct,
 .tok-key {
-  color: #e7c36a;
+  color: #ffd166;
 }
 
 .tok-fn,
 .tok-type {
-  color: #9ad7ff;
+  color: #c4b5fd;
 }
 
 .tok-prop {
-  color: var(--prompt);
+  color: #7eb6ff;
 }
 
 .tok-str {
-  color: #f0a8a0;
+  color: #ff9b7a;
 }
 
 .tok-num {
-  color: #e7c36a;
+  color: #ffd166;
 }
 
 .section {
-  padding: 2.1rem 0 0.2rem;
+  margin-top: 0.85rem;
 }
 
 .section-head {
@@ -284,7 +295,7 @@ h2 {
   grid-template-columns: 9rem 1fr;
   gap: 0.6rem;
   padding: 0.45rem 0;
-  border-top: 1px dashed var(--line);
+  border-top: 1px solid var(--line);
 }
 
 .stack li:nth-child(odd) {
@@ -315,7 +326,7 @@ h2 {
 }
 
 .certs li {
-  border-top: 1px dashed var(--line);
+  border-top: 1px solid var(--line);
 }
 
 .certs a {
