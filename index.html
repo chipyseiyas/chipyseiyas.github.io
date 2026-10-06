@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Source+Sans+3:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -42,7 +42,10 @@
     <main id="contenido">
       <section class="hero">
         <div class="hero-copy">
-          <p class="kicker">desarrollador · personal</p>
+          <p class="prompt">
+            <span class="user">cipriano@dev</span>:<span class="path">~</span>$
+            <span class="cmd" data-cmd="whoami"></span><span class="caret" aria-hidden="true"></span>
+          </p>
           <h1>Cipriano Silvestre</h1>
           <p class="degree">Ingeniería en Tecnologías de la Información</p>
           <p class="lead">
@@ -58,7 +61,7 @@
         <figure class="editor">
           <div class="editor-bar">
             <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="filename">cipriano.php</span>
+            <span class="filename">$ cat cipriano.php</span>
             <span class="lang">PHP</span>
           </div>
           <pre class="code" aria-label="Perfil escrito como clase PHP"><code><span class="tok-punct">&lt;?php</span>
@@ -81,7 +84,7 @@
 
       <section id="trabajo" class="section">
         <div class="section-head">
-          <p class="kicker">01 — trabajo</p>
+          <p class="kicker"><span class="user">cipriano@dev</span>:<span class="path">~</span>$ cat trabajo.txt</p>
           <h2>Lo que hago</h2>
         </div>
         <p class="section-lead">
@@ -126,7 +129,7 @@
 
       <section id="stack" class="section">
         <div class="section-head">
-          <p class="kicker">02 — stack</p>
+          <p class="kicker"><span class="user">cipriano@dev</span>:<span class="path">~</span>$ ls stack</p>
           <h2>Con lo que construyo</h2>
         </div>
         <ul class="stack">
@@ -148,7 +151,7 @@
 
       <section id="certificaciones" class="section">
         <div class="section-head">
-          <p class="kicker">03 — certificados</p>
+          <p class="kicker"><span class="user">cipriano@dev</span>:<span class="path">~</span>$ ls certificados</p>
           <h2>Microcredenciales</h2>
         </div>
         <p class="section-lead">
@@ -184,7 +187,7 @@
 
       <section id="contacto" class="section contact">
         <div class="section-head">
-          <p class="kicker">04 — contacto</p>
+          <p class="kicker"><span class="user">cipriano@dev</span>:<span class="path">~</span>$ contact --mail</p>
           <h2>Hablemos de código</h2>
         </div>
         <p class="section-lead">

@@ -17,3 +17,28 @@ const markActive = () => {
 
 markActive();
 document.addEventListener("scroll", markActive, { passive: true });
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const command = document.querySelector(".cmd");
+const root = document.documentElement;
+
+if (command) {
+  const text = command.dataset.cmd || "";
+  if (reduceMotion) {
+    command.textContent = text;
+    root.classList.add("booted");
+  } else {
+    root.classList.add("js");
+    let index = 0;
+    const type = () => {
+      command.textContent = text.slice(0, index);
+      index += 1;
+      if (index <= text.length) {
+        window.setTimeout(type, 70);
+      } else {
+        window.setTimeout(() => root.classList.add("booted"), 180);
+      }
+    };
+    type();
+  }
+}
