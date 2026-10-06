@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cipriano Silvestre — Desarrollador</title>
+    <meta
+      name="description"
+      content="Cipriano Silvestre, desarrollador de software. PHP, Laravel, Vue, Ionic y APIs."
+    />
+    <meta property="og:title" content="Cipriano Silvestre — Desarrollador" />
+    <meta
+      property="og:description"
+      content="Página personal de Cipriano Silvestre. PHP, Laravel, Vue y APIs."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chipyseiyas.github.io/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="top">
+      <a class="mark" href="#contenido">
+        <span class="mark-prompt">~/</span>cipriano
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#trabajo">Trabajo</a>
+        <a href="#stack">Stack</a>
+        <a href="#codigo">Código</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">desarrollador · personal</p>
+          <h1>Cipriano Silvestre</h1>
+          <p class="lead">
+            Escribo software. Backend en PHP y Laravel, interfaces en Vue e
+            Ionic, y lo que los une: APIs, bases de datos y colas.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Escribirme</a>
+            <a class="btn" href="https://github.com/chipyseiyas" rel="noopener">github.com/chipyseiyas</a>
+          </div>
+        </div>
+
+        <figure class="editor">
+          <div class="editor-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="filename">cipriano.php</span>
+            <span class="lang">PHP</span>
+          </div>
+          <pre class="code" aria-label="Perfil escrito como clase PHP"><code><span class="tok-punct">&lt;?php</span>
+
+<span class="tok-key">declare</span>(<span class="tok-fn">strict_types</span>: <span class="tok-num">1</span>);
+
+<span class="tok-key">final class</span> <span class="tok-type">Cipriano</span>
+{
+    <span class="tok-key">public const</span> <span class="tok-prop">NAME</span>  = <span class="tok-str">'Cipriano Silvestre'</span>;
+    <span class="tok-key">public const</span> <span class="tok-prop">ROLE</span>  = <span class="tok-str">'Desarrollador de software'</span>;
+    <span class="tok-key">public const</span> <span class="tok-prop">MAIL</span>  = <span class="tok-str">'cats1325@gmail.com'</span>;
+    <span class="tok-key">public const</span> <span class="tok-prop">FOCUS</span> = <span class="tok-str">'PHP, Laravel, Vue y APIs'</span>;
+}</code></pre>
+        </figure>
+      </section>
+
+      <section id="trabajo" class="section">
+        <div class="section-head">
+          <p class="kicker">01 — trabajo</p>
+          <h2>Lo que hago</h2>
+        </div>
+        <p class="section-lead">
+          Armo aplicaciones web de punta a punta: la API, los datos y la
+          pantalla. El código público está en GitHub; el contacto es el correo
+          personal.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Backend</h3>
+            <p>
+              PHP y Laravel. Modelos, reglas de negocio y APIs REST.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Interfaces</h3>
+            <p>
+              Vue.js e Ionic para las pantallas que consume esa API.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Datos y mensajería</h3>
+            <p>
+              MySQL y Redis para el estado. RabbitMQ, SQS y S3 para colas,
+              trabajos y archivos.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack" class="section">
+        <div class="section-head">
+          <p class="kicker">02 — stack</p>
+          <h2>Con lo que construyo</h2>
+        </div>
+        <ul class="stack">
+          <li><span>Lenguaje</span><strong>PHP</strong></li>
+          <li><span>Framework</span><strong>Laravel · Eloquent</strong></li>
+          <li><span>Cliente</span><strong>Vue.js · Ionic</strong></li>
+          <li><span>Datos</span><strong>MySQL · Redis</strong></li>
+          <li><span>Mensajería</span><strong>RabbitMQ · Amazon SQS</strong></li>
+          <li><span>Nube</span><strong>AWS · S3 · Nginx</strong></li>
+          <li><span>Práctica</span><strong>REST · Git · Scrum</strong></li>
+        </ul>
+      </section>
+
+      <section id="codigo" class="section">
+        <div class="section-head">
+          <p class="kicker">03 — código público</p>
+          <h2>Repositorios</h2>
+        </div>
+        <p class="section-lead">
+          Lo que tengo abierto en GitHub, en la cuenta
+          <a href="https://github.com/chipyseiyas" rel="noopener">chipyseiyas</a>.
+        </p>
+        <ul class="repos">
+          <li>
+            <a href="https://github.com/chipyseiyas/maintenance" rel="noopener">
+              <span class="repo-name">maintenance</span>
+              <span class="repo-lang">HTML</span>
+            </a>
+            <p>Página estática de mantenimiento.</p>
+          </li>
+          <li>
+            <a href="https://github.com/chipyseiyas/productos" rel="noopener">
+              <span class="repo-name">productos</span>
+              <span class="repo-lang">TypeScript</span>
+            </a>
+            <p>Aplicación Angular de productos, generada con Angular CLI.</p>
+          </li>
+          <li>
+            <a href="https://github.com/chipyseiyas/pcloud-test" rel="noopener">
+              <span class="repo-name">pcloud-test</span>
+              <span class="repo-lang">PHP</span>
+            </a>
+            <p>Esqueleto PHP con controladores, vistas y assets.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contacto" class="section contact">
+        <div class="section-head">
+          <p class="kicker">04 — contacto</p>
+          <h2>Hablemos de código</h2>
+        </div>
+        <p class="section-lead">
+          Si quieres ver cómo trabajo o hablar de un problema de backend,
+          escríbeme al correo personal.
+        </p>
+        <ul class="links">
+          <li>
+            <a href="mailto:cats1325@gmail.com">cats1325@gmail.com</a>
+          </li>
+          <li>
+            <a href="https://github.com/chipyseiyas" rel="noopener">github.com/chipyseiyas</a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/cipriano-silvestre-andrade-9a4353109"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="status" aria-label="Barra de estado">
+      <span>main</span>
+      <span>PHP</span>
+      <span>chipyseiyas</span>
+      <span>personal</span>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
