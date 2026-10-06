@@ -331,49 +331,6 @@ h2 {
   font-size: 0.78rem;
 }
 
-.repos {
-  list-style: none;
-  margin: 1.5rem 0 0;
-  padding: 0;
-}
-
-.repos li {
-  padding: 1.1rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.repos li:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.repos a {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  text-decoration: none;
-}
-
-.repo-name {
-  font-family: "JetBrains Mono", monospace;
-  color: var(--text);
-}
-
-.repos a:hover .repo-name,
-.repos a:focus-visible .repo-name {
-  color: var(--amber);
-}
-
-.repo-lang {
-  color: var(--muted);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.78rem;
-}
-
-.repos p {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
-}
-
 .links {
   list-style: none;
   margin: 1.4rem 0 0;
