@@ -434,6 +434,16 @@ h2 {
   border-top: 1px solid var(--line);
 }
 
+.certs a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.certs a:hover,
+.certs a:focus-visible {
+  color: var(--amber);
+}
+
 .certs li:last-child {
   border-bottom: 1px solid var(--line);
 }
