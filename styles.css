@@ -261,15 +261,16 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem 1.4rem;
-  margin-top: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 0.4rem;
 }
 
 .card {
-  padding: 0.15rem 0 0.2rem;
+  padding: 0.85rem 0;
   background: transparent;
   border: 0;
+  border-top: 1px solid var(--line);
 }
 
 .card h3 {
@@ -280,36 +281,38 @@ h2 {
 }
 
 .card h3::before {
-  content: "> ";
+  content: ">";
+  display: inline-block;
+  width: 1.4rem;
   color: var(--dim);
 }
 
 .card p {
   margin: 0;
-  padding-left: 1.15rem;
+  padding-left: 1.4rem;
   color: var(--ink);
 }
 
 .stack {
   list-style: none;
-  margin: 0.8rem 0 0;
+  margin: 0.4rem 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
 
 .stack li {
   display: grid;
-  grid-template-columns: 15ch minmax(0, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: 1rem;
   align-items: baseline;
-  padding: 0.55rem 0;
+  padding: 0.65rem 0;
   border-top: 1px solid var(--line);
 }
 
 .stack span {
   color: var(--dim);
+  white-space: nowrap;
 }
 
 .stack strong {
@@ -448,9 +451,7 @@ html.js.booted #contacto {
 }
 
 @media (max-width: 900px) {
-  .hero,
-  .cards,
-  .stack {
+  .hero {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -488,12 +489,19 @@ html.js.booted #contacto {
 
   .stack li {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.15rem;
+    gap: 0.2rem;
   }
 
-  .stack strong,
+  .stack span {
+    white-space: normal;
+  }
+
+  .stack strong {
+    padding-left: 0;
+  }
+
   .card p {
-    padding-left: 1rem;
+    padding-left: 1.4rem;
   }
 
   .certs a {
